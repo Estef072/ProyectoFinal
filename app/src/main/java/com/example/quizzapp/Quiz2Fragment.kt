@@ -76,7 +76,7 @@ class Quiz2Fragment : Fragment(), View.OnClickListener {
             else -> currentQuestion.opcion3
         }
 
-        if (selectedOption==(currentQuestion.answer)) {
+        if (selectedOption.equals(currentQuestion.answer)) {
             score++
         }
         displayQuestion()

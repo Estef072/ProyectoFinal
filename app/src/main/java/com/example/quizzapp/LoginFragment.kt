@@ -73,11 +73,11 @@ class LoginFragment : Fragment() {
                     Navigation.findNavController(view)
                         .navigate(R.id.action_loginFragment_to_menuFragment)
 
-
                 }else{
+                    //EmailText.setText("CONTRAEÑA INCORRECTA")
 
                 }
-            }else{
+            }else {//EmailText.setText("USUARIO INCORRECTO")
 
 
             }
@@ -87,17 +87,12 @@ class LoginFragment : Fragment() {
 
 
         buttonLogin.setOnClickListener {
-            //for( i in 0..2){
             quoteViewModel.randomQuote(0)
-            //}
 
 
-        }
-        if(confirmUsuario==false){
-            EmailText.setText("USUARIO INCORRECTO")
-        }
-        else{
-            EmailText.setText("CONTRAEÑA INCORRECTA")
+
+
+
         }
     }
 

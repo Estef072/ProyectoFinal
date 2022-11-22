@@ -18,7 +18,7 @@ import com.example.quizzapp.databinding.FragmentInicioBinding
  */
 class InicioFragment : Fragment() {
     lateinit var btnLogin: Button
-    lateinit var btnRegis: Button
+
 
 
     override fun onCreateView(
@@ -31,14 +31,12 @@ class InicioFragment : Fragment() {
     override fun onViewCreated(view: View,saveInstanceState:Bundle?) {
         super.onViewCreated(view,saveInstanceState)
         btnLogin =view.findViewById(R.id.buttonLogin)
-        btnRegis = view.findViewById(R.id.buttonRegister)
+
 
         btnLogin.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_inicioFragment_to_loginFragment)
         }
-        btnRegis.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_inicioFragment_to_registerFragment)
-        }
+
     }
 
 

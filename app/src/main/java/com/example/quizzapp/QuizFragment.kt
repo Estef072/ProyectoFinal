@@ -28,12 +28,16 @@ class QuizFragment : Fragment(), View.OnClickListener {
     lateinit var currentQuestion: Question
     var score = 0
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_quiz, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -75,7 +79,7 @@ class QuizFragment : Fragment(), View.OnClickListener {
             else -> currentQuestion.opcion3
         }
 
-        if (selectedOption.equals(currentQuestion.answer)) {
+        if (selectedOption==(currentQuestion.answer)) {
             score++
         }
         displayQuestion()

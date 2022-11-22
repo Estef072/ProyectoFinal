@@ -12,13 +12,10 @@ class QuoteProvider {
 
 
         private val quote = listOf<UoteModel>(
+
             UoteModel(
-                email = "jcdurini@gmail.com",
-                contrasena = "123456"
-            ),
-            UoteModel(
-                email = "elv12345@uvg.edu.gt",
-                contrasena = "holasoyyo"
+                email = "elv20725@uvg.edu.gt",
+                contrasena = "12345"
             ),
             UoteModel(
                 email = "cru20673@uvg.edu.gt",
