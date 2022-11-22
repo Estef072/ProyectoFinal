@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.quizzapp.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.quizzapp.registerFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.quizzapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_mlog" >
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.quizzapp.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_quiz2Fragment"
+            app:destination="@id/quiz2Fragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_quiz3Fragment"
+            app:destination="@id/quiz3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.quizzapp.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_result_quizFragment"
+            app:destination="@id/result_quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_quizFragment"
+        android:name="com.example.quizzapp.Result_quizFragment"
+        android:label="fragment_result_quiz"
+        tools:layout="@layout/fragment_result_quiz" >
+        <action
+            android:id="@+id/action_result_quizFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz2Fragment"
+        android:name="com.example.quizzapp.Quiz2Fragment"
+        android:label="fragment_quiz2"
+        tools:layout="@layout/fragment_quiz2" >
+        <action
+            android:id="@+id/action_quiz2Fragment_to_result_quizFragment"
+            app:destination="@id/result_quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz3Fragment"
+        android:name="com.example.quizzapp.Quiz3Fragment"
+        android:label="fragment_quiz3"
+        tools:layout="@layout/fragment_quiz3" >
+        <action
+            android:id="@+id/action_quiz3Fragment_to_result_quizFragment"
+            app:destination="@id/result_quizFragment" />
+    </fragment>
+</navigation>
